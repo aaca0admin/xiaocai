@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>lqh-csh todesk 对话</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .chat-container {
+            width: 100%;
+            max-width: 600px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .chat-header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+            font-size: 1.2em;
+        }
+        .chat-body {
+            padding: 20px;
+            overflow-y: auto;
+            height: 400px;
+        }
+        .chat-message {
+            display: flex;
+            margin-bottom: 15px;
+        }
+        .chat-message.sent .message-content {
+            background-color: #007bff;
+            color: #fff;
+            margin-left: auto;
+        }
+        .chat-message.received .message-content {
+            background-color: #f1f0f0;
+            color: #333;
+        }
+        .message-content {
+            max-width: 70%;
+            padding: 10px;
+            border-radius: 20px;
+            font-size: 1em;
+        }
+        .timestamp {
+            font-size: 0.8em;
+            color: #999;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">lqh-csh todesk 对话</div>
+        <div class="chat-body">
+            <div class="chat-message received">
+                <div class="message-content">
+                    帅呆了兄弟
+                    <div class="timestamp">2024年5月25日 10:00 AM</div>
+                </div>
+            </div>
+            <div class="chat-message sent">
+                <div class="message-content">
+                    你不是有吗
+                    <div class="timestamp">2024年5月25日 10:01 AM</div>
+                </div>
+            </div>
+            <div class="chat-message received">
+                <div class="message-content">
+                    我有个鸡巴
+                    <div class="timestamp">2024年5月25日 10:02 AM</div>
+                </div>
+            </div>
+            <div class="chat-message sent">
+                <div class="message-content">
+                    你那个壁纸怎么来的
+                    <div class="timestamp">2024年5月25日 10:03 AM</div>
+                </div>
+            </div>
+            <div class="chat-message received">
+                <div class="message-content">
+                    外面有人免费送，有点小渠道
+                    <div class="timestamp">2024年5月25日 10:04 AM</div>
+                </div>
+            </div>
+            <div class="chat-message sent">
+                <div class="message-content">
+                    nb给我
+                    <div class="timestamp">2024年5月25日 10:05 AM</div>
+                </div>
+            </div>
+            <div class="chat-message received">
+                <div class="message-content">
+                    ok，你的资源也给我一点
+                    <div class="timestamp">2024年5月25日 10:06 AM</div>
+                </div>
+            </div>
+            <div class="chat-message sent">
+                <div class="message-content">
+                    随便
+                    <div class="timestamp">2024年5月25日 10:07 AM</div>
+                </div>
+            </div>
+            <div class="chat-message received">
+                <div class="message-content">
+                    OK
+                    <div class="timestamp">2024年5月25日 10:08 AM</div>
+                </div>
+            </div>
+            <div class="chat-message sent">
+                <div class="message-content">
+                    好了牢底
+                    <div class="timestamp">2024年5月25日 10:09 AM</div>
+                </div>
+            </div>
+            <div class="chat-message received">
+                <div class="message-content">
+                    有别的吗，这个不好看
+                    <div class="timestamp">2024年5月25日 10:10 AM</div>
+                </div>
+            </div>
+            <div class="chat-message sent">
+                <div class="message-content">
+                    有，但不在我这里
+                    <div class="timestamp">2024年5月25日 10:11 AM</div>
+                </div>
+            </div>
+            <div class="chat-message received">
+                <div class="message-content">
+                    这有时间传给我
+                    <div class="timestamp">2024年5月25日 10:12 AM</div>
+                </div>
+            </div>
+            <div class="chat-message sent">
+                <div class="message-content">
+                    到时候在看看【doge】
+                    <div class="timestamp">2024年5月25日 10:13 AM</div>
+                </div>
+            </div>
+            <div class="chat-message received">
+                <div class="message-content">
+                    啥东西
+                    <div class="timestamp">2024年5月25日 10:14 AM</div>
+                </div>
+            </div>
+            <div class="chat-message sent">
+                <div class="message-content">
+                    doge=狗头滑稽
+                    <div class="timestamp">2024年5月25日 10:15 AM</div>
+                </div>
+            </div>
+            <div class="chat-message received">
+                <div class="message-content">
+                    6
+                    <div class="timestamp">2024年5月25日 10:16 AM</div>
+                </div>
+            </div>
+            <div class="chat-message sent">
+                <div class="message-content">
+                    你还有cf啊
+                    <div class="timestamp">2024年5月25日 10:17 AM</div>
+                </div>
+            </div>
+            <div class="chat-message received">
+                <div class="message-content">
+                    有，不咋玩
+                    <div class="timestamp">2024年5月25日 10:18 AM</div>
+                </div>
+            </div>
+            <div class="chat-message sent">
+                <div class="message-content">
+                    牛批，你这电脑叫什么名字？
+                    <div class="timestamp">2024年5月25日 10:19 AM</div>
+                </div>
+            </div>
+            <div class="chat-message received">
+                <div class="message-content">
+                    忘记了，我看一下
+                    <div class="timestamp">2024年5月25日 10:20 AM</div>
+                </div>
+            </div>
+            <div class="chat-message sent">
+                <div class="message-content">
+                    好像是
+                    <div class="timestamp">2024年5月25日 10:21 AM</div>
+                </div>
+            </div>
+            <div class="chat-message received">
+                <div class="message-content">
+                    你有没有TB
+                    <div class="timestamp">2024年5月25日 10:22 AM</div>
+                </div>
+            </div>
+            <div class="chat-message sent">
+                <div class="message-content">
+                    怎么看电脑名字来着
+                    <div class="timestamp">2024年5月25日 10:23 AM</div>
+                </div>
+            </div>
+            <div class="chat-message received">
+                <div class="message-content">
+                    6
+                    <div class="timestamp">2024年5月25日 10:24 AM</div>
+                </div>
+            </div>
+            <div class="chat-message sent">
+                <div class="message-content">
+                    你自己看一下
+                    <div class="timestamp">2024年5月25日 10:25 AM</div>
+                </div>
+            </div>
+            <div class="chat-message received">
+                <div class="message-content">
+                    8代i5带的动cf？
+                    <div class="timestamp">2024年5月25日 10:26 AM</div>
+                </div>
+            </div>
+            <div class="chat-message sent">
+                <div class="message-content">
+                    cf又不吃显卡肯定可以就是帧率不能调高，因为极限了
+                    <div class="timestamp">2024年5月25日 10:27 AM</div>
+                </div>
+            </div>
+            <div class="chat-message received">
+                <div class="message-content">
+                    但是8代i5是cpu【无语】
+                    <div class="timestamp">2024年5月25日 10:28 AM</div>
+                </div>
+            </div>
+            <div class="chat-message sent">
+                <div class="message-content">
+                    主要是看显卡
+                    <div class="timestamp">2024年5月25日 10:29 AM</div>
+                </div>
+            </div>
+            <div class="chat-message received">
+                <div class="message-content">
+                    看那个
+                    <div class="timestamp">2024年5月25日 10:30 AM</div>
+                </div>
+            </div>
+            <div class="chat-message sent">
+                <div class="message-content">
+                    怎么还没有号啊，怎么这么久
+                    <div class="timestamp">2024年5月25日 10:31 AM</div>
+                </div>
+            </div>
+            <div class="chat-message received">
+                <div class="message-content">
+                    正常
+                    <div class="timestamp">2024年5月25日 10:32 AM</div>
+                </div>
+            </div>
+            <div class="chat-message sent">
+                <div class="message-content">
+                    主要是cf吃的是cpu？
+                    <div class="timestamp">2024年5月25日 10:33 AM</div>
+                </div>
+            </div>
+            <div class="chat-message received">
+                <div class="message-content">
+                    ？？生死都可以玩，cf根本用说了
+                    <div class="timestamp">2024年5月25日 10:34 AM</div>
+                </div>
+            </div>
+            <div class="chat-message sent">
+                <div class="message-content">
+                    牛批
+                    <div class="timestamp">2024年5月25日 10:35 AM</div>
+                </div>
+            </div>
+            <div class="chat-message received">
+                <div class="message-content">
+                    我现在只想说一句：操蛋
+                    <div class="timestamp">2024年5月25日 10:36 AM</div>
+                </div>
+            </div>
+            <div class="chat-message sent">
+                <div class="message-content">
+                    我刚刚房间灯开着，然后我爸问我为什么还不睡觉，又被吊了一下
+                    <div class="timestamp">2024年5月25日 10:37 AM</div>
+                </div>
+            </div>
+            <div class="chat-message received">
+                <div class="message-content">
+                    没事，你就是来吊的
+                    <div class="timestamp">2024年5月25日 10:38 AM</div>
+                </div>
+            </div>
+            <div class="chat-message sent">
+                <div class="message-content">
+                    嘿，我cnm，
+                    <div class="timestamp">2024年5月25日 10:39 AM</div>
+                </div>
+            </div>
+            <div class="chat-message received">
+                <div class="message-content">
+                    就是这个东西怎么这么慢啊
+                    <div class="timestamp">2024年5月25日 10:40 AM</div>
+                </div>
+            </div>
+            <div class="chat-message sent">
+                <div class="message-content">
+                    还没有好啊
+                    <div class="timestamp">2024年5月25日 10:41 AM</div>
+                </div>
+            </div>
+            <div class="chat-message received">
+                <div class="message-content">
+                    我当时用了快一个小时才好，我电脑比你还要好一点点，你还想要多快
+                    <div class="timestamp">2024年5月25日 10:42 AM</div>
+                </div>
+            </div>
+            <div class="chat-message sent">
+                <div class="message-content">
+                    没话说了
+                    <div class="timestamp">2024年5月25日 10:43 AM</div>
+                </div>
+            </div>
+            <div class="chat-message received">
+                <div class="message-content">
+                    这个软件什么都不吃，主要是你这有个wps在这里
+                    <div class="timestamp">2024年5月25日 10:44 AM</div>
+                </div>
+            </div>
+            <div class="chat-message sent">
+                <div class="message-content">
+                    确定吗？有用吗，建议你等一下吧，我先去睡觉了
+                    <div class="timestamp">2024年5月25日 10:45 AM</div>
+                </div>
+            </div>
+            <div class="chat-message received">
+                <div class="message-content">
+                    删了啊
+                    <div class="timestamp">2024年5月25日 10:46 AM</div>
+                </div>
+            </div>
+            <div class="chat-message sent">
+                <div class="message-content">
+                    你这是什么勾八壁纸这么帅？
+                    <div class="timestamp">2024年5月25日 10:47 AM</div>
+                </div>
+            </div>
+            <div class="chat-message received">
+                <div class="message-content">
+                    嘿嘿
+                    <div class="timestamp">2024年5月25日 10:48 AM</div>
+                </div>
+            </div>
+            <div class="chat-message sent">
+                <div class="message-content">
+                    你不说那我可就自己看了额
+                    <div class="timestamp">2024年5月25日 10:49 AM</div>
+                </div>
+            </div>
+            <div class="chat-message received">
+                <div class="message-content">
+                    koi 没看到这个koi啊
+                    <div class="timestamp">2024年5月25日 10:50 AM</div>
+                </div>
+            </div>
+            <div class="chat-message sent">
+                <div class="message-content">
+                    这个好像没有下载
+                    <div class="timestamp">2024年5月25日 10:51 AM</div>
+                </div>
+            </div>
+            <div class="chat-message received">
+                <div class="message-content">
+                    没有下载那你是怎么用来当壁纸的
+                    <div class="timestamp">2024年5月25日 10:52 AM</div>
+                </div>
+            </div>
+            <div class="chat-message sent">
+                <div class="message-content">
+                    好像在wegame那个下载的
+                    <div class="timestamp">2024年5月25日 10:53 AM</div>
+                </div>
+            </div>
+            <div class="chat-message received">
+                <div class="message-content">
+                    你不说我都吧wegame忘记了【捂脸】
+                    <div class="timestamp">2024年5月25日 10:54 AM</div>
+                </div>
+            </div>
+            <div class="chat-message sent">
+                <div class="message-content">
+                    恭喜你，又要漫长的等待了
+                    <div class="timestamp">2024年5月25日 10:55 AM</div>
+                </div>
+            </div>
+            <div class="chat-message received">
+                <div class="message-content">
+                    为什么去了
+                    <div class="timestamp">2024年5月25日 10:56 AM</div>
+                </div>
+            </div>
+            <div class="chat-message sent">
+                <div class="message-content">
+                    ？？？什么去了？就是企业、、无语没有
+                    <div class="timestamp">2024年5月25日 10:57 AM</div>
+                </div>
+            </div>
+            <div class="chat-message received">
+                <div class="message-content">
+                    6你好好看看这句话，他通顺吗？
+                    <div class="timestamp">2024年5月25日 10:58 AM</div>
+                </div>
+            </div>
+            <div class="chat-message sent">
+                <div class="message-content">
+                    无所谓\睡觉了ok休眠应该可以吧
+                    <div class="timestamp">2024年5月25日 10:59 AM</div>
+                </div>
+            </div>
+            <div class="chat-message received">
+                <div class="message-content">
+                    ok
+                    <div class="timestamp">2024年5月25日 10:58 AM</div>
+                </div>
+            </div>
+            <div class="chat-message sent">
+                <div class="message-content">
+                    休眠应该可以吧
+                    <div class="timestamp">2024年5月25日 10:59 AM</div>
+                </div>
+            </div>
+            <div class="chat-message received">
+                <div class="message-content">
+                    正常来讲的话应该可以，电脑不一样，所以我也不知道
+                    <div class="timestamp">2024年5月25日 11:00 AM</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
